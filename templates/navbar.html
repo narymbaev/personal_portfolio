@@ -1,3 +1,29 @@
-<div class="navbar">
-    <a href="">LOGO</a>
-</div>
+{% load static %}
+
+<nav id="topNav" class="navbar navbar-expand-md navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'project/Logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
+      <span>Nurm</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% static 'project/resume.pdf' %}">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/nurm/" target="_blank">LinkedIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/nurm" target="_blank">Twitter</a>
+        </li>
+        <li>
+          <a role="button" href="{% url 'blog:blogs' %}" class="btn btn-primary">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
